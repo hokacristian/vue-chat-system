@@ -1,12 +1,18 @@
 <template>
   <div class="h-screen bg-gray-50 dark:bg-gray-900 flex flex-col">
     <Navbar 
+      v-if="!chat.currentRoom.value"
       :mobile-menu-open="mobileMenuOpen"
+      :current-page="currentPage"
       @navigate="navigate"
       @toggle-mobile-menu="toggleMobileMenu"
     />
     <main class="flex-1 overflow-hidden">
-      <Profile v-if="currentPage === 'Profile'" />
+      <Profile 
+        v-if="currentPage === 'Profile'" 
+        :current-user="chat.currentUser.value" 
+        :loading="chat.loading.value"
+      />
       <ArchivedList 
         v-else-if="currentPage === 'Archived'"
         :rooms="chat.archivedRooms.value" 
@@ -25,7 +31,7 @@
       />
       <ChatRoomList 
         v-else
-        :rooms="filteredRooms" 
+        :rooms="sortedRooms" 
         :current-user="chat.currentUser.value"
         :loading="chat.loading.value"
         @select-room="chat.selectRoom"
@@ -70,6 +76,14 @@ const filteredRooms = computed(() => {
     return chat.rooms.value.filter(room => room.type === 'group')
   }
   return chat.rooms.value
+})
+
+const sortedRooms = computed(() => {
+  return filteredRooms.value.slice().sort((a, b) => {
+    const dateA = new Date(a.last_message.created_at)
+    const dateB = new Date(b.last_message.created_at)
+    return dateB - dateA
+  })
 })
 
 onMounted(() => {

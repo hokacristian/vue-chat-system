@@ -17,10 +17,35 @@
         <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
           <div class="hidden sm:block sm:ml-6">
             <div class="flex space-x-4">
-              <a href="#" @click.prevent="$emit('navigate', 'All chat')" class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">All chat</a>
-              <a href="#" @click.prevent="$emit('navigate', 'Group')" class="text-gray-800 dark:text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Group</a>
-              <a href="#" @click.prevent="$emit('navigate', 'Archived')" class="text-gray-800 dark:text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Archived</a>
-              <a href="#" @click.prevent="$emit('navigate', 'Profile')" class="text-gray-800 dark:text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Profile</a>
+              <a 
+                href="#" 
+                @click.prevent="$emit('navigate', 'All chat')" 
+                :class="['px-3 py-2 rounded-md text-sm font-medium', currentPage === 'All chat' ? 'bg-gray-900 text-white' : 'text-gray-800 dark:text-gray-300 hover:bg-gray-700 hover:text-white']"
+                aria-current="page"
+              >
+                All chat
+              </a>
+              <a 
+                href="#" 
+                @click.prevent="$emit('navigate', 'Group')" 
+                :class="['px-3 py-2 rounded-md text-sm font-medium', currentPage === 'Group' ? 'bg-gray-900 text-white' : 'text-gray-800 dark:text-gray-300 hover:bg-gray-700 hover:text-white']"
+              >
+                Group
+              </a>
+              <a 
+                href="#" 
+                @click.prevent="$emit('navigate', 'Archived')" 
+                :class="['px-3 py-2 rounded-md text-sm font-medium', currentPage === 'Archived' ? 'bg-gray-900 text-white' : 'text-gray-800 dark:text-gray-300 hover:bg-gray-700 hover:text-white']"
+              >
+                Archived
+              </a>
+              <a 
+                href="#" 
+                @click.prevent="$emit('navigate', 'Profile')" 
+                :class="['px-3 py-2 rounded-md text-sm font-medium', currentPage === 'Profile' ? 'bg-gray-900 text-white' : 'text-gray-800 dark:text-gray-300 hover:bg-gray-700 hover:text-white']"
+              >
+                Profile
+              </a>
             </div>
           </div>
         </div>
@@ -30,10 +55,35 @@
     <!-- Mobile menu, show/hide based on menu state. -->
     <div v-if="mobileMenuOpen" class="sm:hidden" id="mobile-menu">
       <div class="px-2 pt-2 pb-3 space-y-1">
-        <a href="#" @click.prevent="$emit('navigate', 'All chat')" class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium" aria-current="page">All chat</a>
-        <a href="#" @click.prevent="$emit('navigate', 'Group')" class="text-gray-800 dark:text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Group</a>
-        <a href="#" @click.prevent="$emit('navigate', 'Archived')" class="text-gray-800 dark:text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Archived</a>
-        <a href="#" @click.prevent="$emit('navigate', 'Profile')" class="text-gray-800 dark:text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Profile</a>
+        <a 
+          href="#" 
+          @click.prevent="$emit('navigate', 'All chat')" 
+          :class="['block px-3 py-2 rounded-md text-base font-medium', currentPage === 'All chat' ? 'bg-gray-900 text-white' : 'text-gray-800 dark:text-gray-300 hover:bg-gray-700 hover:text-white']"
+          aria-current="page"
+        >
+          All chat
+        </a>
+        <a 
+          href="#" 
+          @click.prevent="$emit('navigate', 'Group')" 
+          :class="['block px-3 py-2 rounded-md text-base font-medium', currentPage === 'Group' ? 'bg-gray-900 text-white' : 'text-gray-800 dark:text-gray-300 hover:bg-gray-700 hover:text-white']"
+        >
+          Group
+        </a>
+        <a 
+          href="#" 
+          @click.prevent="$emit('navigate', 'Archived')" 
+          :class="['block px-3 py-2 rounded-md text-base font-medium', currentPage === 'Archived' ? 'bg-gray-900 text-white' : 'text-gray-800 dark:text-gray-300 hover:bg-gray-700 hover:text-white']"
+        >
+          Archived
+        </a>
+        <a 
+          href="#" 
+          @click.prevent="$emit('navigate', 'Profile')" 
+          :class="['block px-3 py-2 rounded-md text-base font-medium', currentPage === 'Profile' ? 'bg-gray-900 text-white' : 'text-gray-800 dark:text-gray-300 hover:bg-gray-700 hover:text-white']"
+        >
+          Profile
+        </a>
       </div>
     </div>
   </nav>
@@ -41,7 +91,8 @@
 
 <script setup>
 defineProps({
-  mobileMenuOpen: Boolean
+  mobileMenuOpen: Boolean,
+  currentPage: String
 })
 defineEmits(['navigate', 'toggle-mobile-menu'])
 </script>
