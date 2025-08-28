@@ -1,6 +1,7 @@
 import { ref, computed } from 'vue'
 
 export function useChat() {
+  const loading = ref(true)
   const currentRoom = ref(null)
   const rooms = ref([])
   const archivedRooms = ref([])
@@ -108,6 +109,7 @@ export function useChat() {
   }
 
   return {
+    loading,
     currentRoom,
     rooms,
     archivedRooms,

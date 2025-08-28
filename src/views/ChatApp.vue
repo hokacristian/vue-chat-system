@@ -6,37 +6,32 @@
       @toggle-mobile-menu="toggleMobileMenu"
     />
     <main class="flex-1 overflow-hidden">
-      <template v-if="currentPage === 'Profile'">
-        <Profile />
-      </template>
-      <template v-else-if="currentPage === 'Archived'">
-        <ArchivedList 
-          :rooms="chat.archivedRooms.value" 
-          :current-user="chat.currentUser.value"
-          @select-room="chat.selectRoom"
-          @unarchive-room="chat.unarchiveRoom"
-          @delete-room="chat.deleteRoom"
-        />
-      </template>
-      <template v-else>
-        <div v-if="!chat.currentRoom.value" class="h-full">
-          <ChatRoomList 
-            :rooms="filteredRooms" 
-            :current-user="chat.currentUser.value"
-            @select-room="chat.selectRoom"
-            @archive-room="chat.archiveRoom"
-            @delete-room="chat.deleteRoom"
-          />
-        </div>
-        <div v-else class="h-full">
-          <ChatWindow 
-            :room="chat.currentRoom.value" 
-            :current-user="chat.currentUser.value"
-            @go-back="chat.goBack"
-            @send-message="chat.sendMessage"
-          />
-        </div>
-      </template>
+      <Profile v-if="currentPage === 'Profile'" />
+      <ArchivedList 
+        v-else-if="currentPage === 'Archived'"
+        :rooms="chat.archivedRooms.value" 
+        :current-user="chat.currentUser.value"
+        :loading="chat.loading.value"
+        @select-room="chat.selectRoom"
+        @unarchive-room="chat.unarchiveRoom"
+        @delete-room="chat.deleteRoom"
+      />
+      <ChatWindow 
+        v-else-if="chat.currentRoom.value"
+        :room="chat.currentRoom.value" 
+        :current-user="chat.currentUser.value"
+        @go-back="chat.goBack"
+        @send-message="chat.sendMessage"
+      />
+      <ChatRoomList 
+        v-else
+        :rooms="filteredRooms" 
+        :current-user="chat.currentUser.value"
+        :loading="chat.loading.value"
+        @select-room="chat.selectRoom"
+        @archive-room="chat.archiveRoom"
+        @delete-room="chat.deleteRoom"
+      />
     </main>
   </div>
 </template>
@@ -78,7 +73,10 @@ const filteredRooms = computed(() => {
 })
 
 onMounted(() => {
-  chat.currentUser.value = chatData.current_user
-  chat.rooms.value = chatData.rooms
+  setTimeout(() => {
+    chat.currentUser.value = chatData.current_user
+    chat.rooms.value = chatData.rooms
+    chat.loading.value = false
+  }, 1500) // Simulate loading delay
 })
 </script>
