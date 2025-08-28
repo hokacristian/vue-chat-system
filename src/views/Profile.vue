@@ -44,15 +44,15 @@
           <div class="mt-1 flex flex-col space-y-2">
             <a href="https://www.linkedin.com/in/hokacsa/" target="_blank" class="flex items-center space-x-2 text-primary-500 hover:underline">
               <LinkedinIcon class="w-5 h-5" />
-              <span>LinkedIn: hokacsa</span>
+              <span>hokacsa</span>
             </a>
             <a href="https://github.com/hokacristian" target="_blank" class="flex items-center space-x-2 text-primary-500 hover:underline">
               <GithubIcon class="w-5 h-5" />
-              <span>GitHub: hokacristian</span>
+              <span>hokacristian</span>
             </a>
             <a href="https://www.hokacristian.dev" target="_blank" class="flex items-center space-x-2 text-primary-500 hover:underline">
               <GlobeIcon class="w-5 h-5" />
-              <span>Website: hokacristian.dev</span>
+              <span>hokacristian.dev</span>
             </a>
           </div>
         </div>
