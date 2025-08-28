@@ -1,13 +1,13 @@
 <template>
-  <div class="flex flex-col h-full bg-white">
+  <div class="flex flex-col h-full bg-white dark:bg-gray-900">
     <!-- Header -->
-    <div class="flex-shrink-0 bg-white border-b border-gray-200 px-4 py-3">
+    <div class="flex-shrink-0 bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700 px-4 py-3">
       <div class="flex items-center space-x-3">
         <button 
           @click="$emit('goBack')" 
-          class="p-2 rounded-full hover:bg-gray-100 transition-colors duration-200"
+          class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors duration-200"
         >
-          <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg class="w-5 h-5 text-gray-600 dark:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
           </svg>
         </button>
@@ -23,10 +23,10 @@
         </div>
         
         <div class="flex-1 min-w-0">
-          <h2 class="text-lg font-semibold text-gray-900 truncate">
+          <h2 class="text-lg font-semibold text-gray-900 dark:text-white truncate">
             {{ getRoomDisplayName(room, currentUser) }}
           </h2>
-          <div v-if="room.type === 'single'" class="text-sm text-gray-500">
+          <div v-if="room.type === 'single'" class="text-sm text-gray-500 dark:text-gray-400">
             <span v-if="otherParticipant?.is_online" class="text-green-600">
               Online
             </span>
@@ -34,14 +34,14 @@
               Last seen {{ formatLastSeen(otherParticipant?.last_active) }}
             </span>
           </div>
-          <div v-else class="text-sm text-gray-500">
+          <div v-else class="text-sm text-gray-500 dark:text-gray-400">
             {{ room.participants.length }} participants
           </div>
         </div>
         
         <!-- Options button -->
-        <button class="p-2 rounded-full hover:bg-gray-100 transition-colors duration-200">
-          <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <button class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors duration-200">
+          <svg class="w-5 h-5 text-gray-600 dark:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"></path>
           </svg>
         </button>
@@ -51,7 +51,7 @@
     <!-- Messages -->
     <div 
       ref="messagesContainer" 
-      class="flex-1 overflow-y-auto px-4 py-4 space-y-4 bg-gray-50"
+      class="flex-1 overflow-y-auto px-4 py-4 space-y-4 bg-gray-50 dark:bg-gray-800"
     >
       <MessageItem
         v-for="message in room.messages"
@@ -65,7 +65,9 @@
     </div>
 
     <!-- Message Input -->
-    <MessageInput @send-message="handleSendMessage" />
+    <div class="flex-shrink-0">
+      <MessageInput @send-message="handleSendMessage" />
+    </div>
   </div>
 </template>
 
