@@ -17,17 +17,7 @@ export function useRoom() {
     return otherParticipant ? otherParticipant.avatar_url : room.image_url
   }
 
-  const getLastMessage = (room, currentUser) => {
-    if (room.type === 'group') {
-      return room.last_message
-    }
-    // For single chat, prefer showing messages from the other person
-    const messagesFromOthers = room.messages.filter(m => m.sender_id !== currentUser.id)
-    if (messagesFromOthers.length > 0) {
-      // Return the most recent message from other participants
-      return messagesFromOthers[messagesFromOthers.length - 1]
-    }
-    // Fallback to regular last message if no messages from others
+  const getLastMessage = (room) => {
     return room.last_message
   }
 

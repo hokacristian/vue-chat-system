@@ -3,6 +3,7 @@ import { ref, computed } from 'vue'
 export function useChat() {
   const currentRoom = ref(null)
   const rooms = ref([])
+  const archivedRooms = ref([])
   const currentUser = ref(null)
 
   const otherParticipants = computed(() => {
@@ -51,11 +52,23 @@ export function useChat() {
     }
 
     currentRoom.value.messages.push(message)
-    currentRoom.value.last_message = {
+    
+    const newLastMessage = {
       id: message.id,
       content: message.content,
       type: message.type,
       created_at: message.created_at
+    }
+    
+    currentRoom.value.last_message = newLastMessage
+
+    // Update the room in the main rooms list to trigger reactivity
+    const roomIndex = rooms.value.findIndex(r => r.id === currentRoom.value.id)
+    if (roomIndex !== -1) {
+      rooms.value[roomIndex] = {
+        ...rooms.value[roomIndex],
+        last_message: newLastMessage
+      }
     }
 
     simulateMessageStatus(message)
@@ -71,14 +84,41 @@ export function useChat() {
     }, 2000)
   }
 
+  const archiveRoom = (roomId) => {
+    const roomIndex = rooms.value.findIndex(r => r.id === roomId)
+    if (roomIndex !== -1) {
+      const room = rooms.value[roomIndex]
+      archivedRooms.value.push(room)
+      rooms.value.splice(roomIndex, 1)
+    }
+  }
+
+  const unarchiveRoom = (roomId) => {
+    const roomIndex = archivedRooms.value.findIndex(r => r.id === roomId)
+    if (roomIndex !== -1) {
+      const room = archivedRooms.value[roomIndex]
+      rooms.value.push(room)
+      archivedRooms.value.splice(roomIndex, 1)
+    }
+  }
+
+  const deleteRoom = (roomId) => {
+    rooms.value = rooms.value.filter(r => r.id !== roomId)
+    archivedRooms.value = archivedRooms.value.filter(r => r.id !== roomId)
+  }
+
   return {
     currentRoom,
     rooms,
+    archivedRooms,
     currentUser,
     otherParticipants,
     selectRoom,
     goBack,
     markRoomAsRead,
-    sendMessage
+    sendMessage,
+    archiveRoom,
+    unarchiveRoom,
+    deleteRoom
   }
 }
