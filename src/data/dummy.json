@@ -1,9 +1,9 @@
 {
   "current_user": {
-    "id": "user@mail.com",
-    "name": "Regular User",
+    "id": "hokacristian@mail.com",
+    "name": "Hoka Cristian Son",
     "role": 3,
-    "avatar_url": "https://picsum.photos/id/64/100/100"
+    "avatar_url": "https://ik.imagekit.io/swvbgy6po/Hoka%20Cristian%20Son.jpg"
   },
   "rooms": [
     {
@@ -37,10 +37,10 @@
           "is_online": false
         },
         {
-          "id": "user@mail.com",
-          "name": "Regular User",
+          "id": "hokacristian@mail.com",
+          "name": "Hoka Cristian Son",
           "role": 3,
-          "avatar_url": "https://picsum.photos/id/64/100/100",
+          "avatar_url": "https://ik.imagekit.io/swvbgy6po/Hoka%20Cristian%20Son.jpg",
           "last_active": "2024-08-28T20:31:00Z",
           "is_online": true
         }
@@ -95,7 +95,7 @@
           "id": 885517,
           "type": "image",
           "content": "Ini bukti pembayaran saya",
-          "file_url": "https://picsum.photos/id/180/800/600",
+          "file_url": "https://ik.imagekit.io/swvbgy6po/db188abe7082fe01fea9bb8bafdb0018.jpg",
           "file_name": "bukti_pembayaran.jpg",
           "file_size": 245760,
           "sender_id": "customer@mail.com",
@@ -127,8 +127,8 @@
           "is_online": true
         },
         {
-          "id": "user@mail.com",
-          "name": "Regular User",
+          "id": "hokacristian@mail.com",
+          "name": "Hoka Cristian Son",
           "role": 3,
           "avatar_url": "https://picsum.photos/id/64/100/100",
           "last_active": "2024-08-28T20:31:00Z",
@@ -140,7 +140,7 @@
           "id": 885600,
           "type": "text",
           "content": "Halo Admin, saya butuh bantuan",
-          "sender_id": "user@mail.com",
+          "sender_id": "hokacristian@mail.com",
           "status": "read",
           "created_at": "2024-08-28T19:45:00Z",
           "read_at": "2024-08-28T19:46:00Z"
@@ -161,7 +161,7 @@
           "file_url": "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
           "file_name": "laporan_bug.pdf",
           "file_size": 13264,
-          "sender_id": "user@mail.com",
+          "sender_id": "hokacristian@mail.com",
           "status": "delivered",
           "created_at": "2024-08-28T19:48:00Z",
           "read_at": null
@@ -190,8 +190,8 @@
           "is_online": true
         },
         {
-          "id": "user@mail.com",
-          "name": "Regular User",
+          "id": "hokacristian@mail.com",
+          "name": "Hoka Cristian Son",
           "role": 3,
           "avatar_url": "https://picsum.photos/id/64/100/100",
           "last_active": "2024-08-28T20:31:00Z",
@@ -203,7 +203,7 @@
           "id": 885700,
           "type": "text",
           "content": "Halo Agent, saya ada pertanyaan teknis",
-          "sender_id": "user@mail.com",
+          "sender_id": "hokacristian@mail.com",
           "status": "read",
           "created_at": "2024-08-28T18:30:00Z",
           "read_at": "2024-08-28T18:31:00Z"
@@ -244,8 +244,8 @@
           "is_online": false
         },
         {
-          "id": "user@mail.com",
-          "name": "Regular User",
+          "id": "hokacristian@mail.com",
+          "name": "Hoka Cristian Son",
           "role": 3,
           "avatar_url": "https://picsum.photos/id/64/100/100",
           "last_active": "2024-08-28T20:31:00Z",
@@ -257,7 +257,7 @@
           "id": 885800,
           "type": "text",
           "content": "Hi! Terima kasih sudah jadi customer loyal",
-          "sender_id": "user@mail.com",
+          "sender_id": "hokacristian@mail.com",
           "status": "read",
           "created_at": "2024-08-28T17:15:00Z",
           "read_at": "2024-08-28T17:16:00Z"
