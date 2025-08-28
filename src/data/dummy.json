@@ -17,7 +17,7 @@
           "name": "Admin",
           "role": 0,
           "avatar_url": "https://picsum.photos/id/91/100/100",
-          "last_active": "2024-08-28T20:30:00Z",
+          "last_active": "2025-08-26T20:30:00Z",
           "is_online": true
         },
         {
@@ -25,7 +25,7 @@
           "name": "Agent A",
           "role": 1,
           "avatar_url": "https://picsum.photos/id/22/100/100",
-          "last_active": "2024-08-28T20:25:00Z",
+          "last_active": "2025-08-26T20:25:00Z",
           "is_online": true
         },
         {
@@ -33,7 +33,7 @@
           "name": "King Customer",
           "role": 2,
           "avatar_url": "https://picsum.photos/id/45/100/100",
-          "last_active": "2024-08-28T20:28:00Z",
+          "last_active": "2025-08-26T20:28:00Z",
           "is_online": false
         },
         {
@@ -41,7 +41,7 @@
           "name": "Hoka Cristian Son",
           "role": 3,
           "avatar_url": "https://ik.imagekit.io/swvbgy6po/Hoka%20Cristian%20Son.jpg",
-          "last_active": "2024-08-28T20:31:00Z",
+          "last_active": "2025-08-26T20:31:00Z",
           "is_online": true
         }
       ],
@@ -52,8 +52,8 @@
           "content": "Selamat malam",
           "sender_id": "customer@mail.com",
           "status": "read",
-          "created_at": "2024-08-28T20:15:00Z",
-          "read_at": "2024-08-28T20:16:00Z"
+          "created_at": "2025-08-26T20:15:00Z",
+          "read_at": "2025-08-26T20:16:00Z"
         },
         {
           "id": 885513,
@@ -61,8 +61,8 @@
           "content": "Malam",
           "sender_id": "agent@mail.com",
           "status": "read",
-          "created_at": "2024-08-28T20:16:00Z",
-          "read_at": "2024-08-28T20:17:00Z"
+          "created_at": "2025-08-26T20:16:00Z",
+          "read_at": "2025-08-26T20:17:00Z"
         },
         {
           "id": 885514,
@@ -70,7 +70,7 @@
           "content": "Ada yang bisa saya bantu?",
           "sender_id": "agent@mail.com",
           "status": "delivered",
-          "created_at": "2024-08-28T20:17:00Z",
+          "created_at": "2025-08-26T20:17:00Z",
           "read_at": null
         },
         {
@@ -79,7 +79,7 @@
           "content": "Saya ingin mengirimkan bukti pembayaran, karena diaplikasi selalu gagal",
           "sender_id": "customer@mail.com",
           "status": "delivered",
-          "created_at": "2024-08-28T20:18:00Z",
+          "created_at": "2025-08-26T20:18:00Z",
           "read_at": null
         },
         {
@@ -88,7 +88,7 @@
           "content": "Baik, silahkan kirimkan lampiran bukti pembayarannya",
           "sender_id": "agent@mail.com",
           "status": "sent",
-          "created_at": "2024-08-28T20:19:00Z",
+          "created_at": "2025-08-26T20:19:00Z",
           "read_at": null
         },
         {
@@ -100,7 +100,7 @@
           "file_size": 245760,
           "sender_id": "customer@mail.com",
           "status": "sent",
-          "created_at": "2024-08-28T20:20:00Z",
+          "created_at": "2025-08-26T20:20:00Z",
           "read_at": null
         }
       ],
@@ -109,7 +109,7 @@
         "id": 885517,
         "content": "Ini bukti pembayaran saya",
         "type": "image",
-        "created_at": "2024-08-28T20:20:00Z"
+        "created_at": "2025-08-26T20:20:00Z"
       }
     },
     {
@@ -123,7 +123,7 @@
           "name": "Admin",
           "role": 0,
           "avatar_url": "https://picsum.photos/id/91/100/100",
-          "last_active": "2024-08-28T20:30:00Z",
+          "last_active": "2025-08-26T20:30:00Z",
           "is_online": true
         },
         {
@@ -131,7 +131,7 @@
           "name": "Hoka Cristian Son",
           "role": 3,
           "avatar_url": "https://picsum.photos/id/64/100/100",
-          "last_active": "2024-08-28T20:31:00Z",
+          "last_active": "2025-08-26T20:31:00Z",
           "is_online": true
         }
       ],
@@ -142,8 +142,8 @@
           "content": "Halo Admin, saya butuh bantuan",
           "sender_id": "hokacristian@mail.com",
           "status": "read",
-          "created_at": "2024-08-28T19:45:00Z",
-          "read_at": "2024-08-28T19:46:00Z"
+          "created_at": "2025-08-26T19:45:00Z",
+          "read_at": "2025-08-26T19:46:00Z"
         },
         {
           "id": 885601,
@@ -151,8 +151,8 @@
           "content": "Halo, ada yang bisa saya bantu?",
           "sender_id": "admin@mail.com",
           "status": "read",
-          "created_at": "2024-08-28T19:46:00Z",
-          "read_at": "2024-08-28T19:47:00Z"
+          "created_at": "2025-08-26T19:46:00Z",
+          "read_at": "2025-08-26T19:47:00Z"
         },
         {
           "id": 885602,
@@ -163,7 +163,7 @@
           "file_size": 13264,
           "sender_id": "hokacristian@mail.com",
           "status": "delivered",
-          "created_at": "2024-08-28T19:48:00Z",
+          "created_at": "2025-08-26T19:48:00Z",
           "read_at": null
         }
       ],
@@ -172,7 +172,7 @@
         "id": 885602,
         "content": "Bisa tolong cek dokumen ini?",
         "type": "document",
-        "created_at": "2024-08-28T19:48:00Z"
+        "created_at": "2025-08-26T19:48:00Z"
       }
     },
     {
@@ -186,7 +186,7 @@
           "name": "Agent A",
           "role": 1,
           "avatar_url": "https://picsum.photos/id/22/100/100",
-          "last_active": "2024-08-28T20:25:00Z",
+          "last_active": "2025-08-26T20:25:00Z",
           "is_online": true
         },
         {
@@ -194,7 +194,7 @@
           "name": "Hoka Cristian Son",
           "role": 3,
           "avatar_url": "https://picsum.photos/id/64/100/100",
-          "last_active": "2024-08-28T20:31:00Z",
+          "last_active": "2025-08-26T20:31:00Z",
           "is_online": true
         }
       ],
@@ -205,8 +205,8 @@
           "content": "Halo Agent, saya ada pertanyaan teknis",
           "sender_id": "hokacristian@mail.com",
           "status": "read",
-          "created_at": "2024-08-28T18:30:00Z",
-          "read_at": "2024-08-28T18:31:00Z"
+          "created_at": "2025-08-26T18:30:00Z",
+          "read_at": "2025-08-26T18:31:00Z"
         },
         {
           "id": 885701,
@@ -217,7 +217,7 @@
           "file_size": 5510872,
           "sender_id": "agent@mail.com",
           "status": "delivered",
-          "created_at": "2024-08-28T18:32:00Z",
+          "created_at": "2025-08-26T18:32:00Z",
           "read_at": null
         }
       ],
@@ -226,7 +226,7 @@
         "id": 885701,
         "content": "Ini video tutorial yang mungkin membantu",
         "type": "video",
-        "created_at": "2024-08-28T18:32:00Z"
+        "created_at": "2025-08-26T18:32:00Z"
       }
     },
     {
@@ -240,7 +240,7 @@
           "name": "King Customer",
           "role": 2,
           "avatar_url": "https://picsum.photos/id/45/100/100",
-          "last_active": "2024-08-28T20:28:00Z",
+          "last_active": "2025-08-26T20:28:00Z",
           "is_online": false
         },
         {
@@ -248,7 +248,7 @@
           "name": "Hoka Cristian Son",
           "role": 3,
           "avatar_url": "https://picsum.photos/id/64/100/100",
-          "last_active": "2024-08-28T20:31:00Z",
+          "last_active": "2025-08-26T20:31:00Z",
           "is_online": true
         }
       ],
@@ -259,8 +259,8 @@
           "content": "Hi! Terima kasih sudah jadi customer loyal",
           "sender_id": "hokacristian@mail.com",
           "status": "read",
-          "created_at": "2024-08-28T17:15:00Z",
-          "read_at": "2024-08-28T17:16:00Z"
+          "created_at": "2025-08-26T17:15:00Z",
+          "read_at": "2025-08-26T17:16:00Z"
         },
         {
           "id": 885801,
@@ -268,8 +268,8 @@
           "content": "Sama-sama! Senang bisa berbagi pengalaman",
           "sender_id": "customer@mail.com",
           "status": "read",
-          "created_at": "2024-08-28T17:17:00Z",
-          "read_at": "2024-08-28T17:18:00Z"
+          "created_at": "2025-08-26T17:17:00Z",
+          "read_at": "2025-08-26T17:18:00Z"
         }
       ],
       "unread_count": 0,
@@ -277,7 +277,7 @@
         "id": 885801,
         "content": "Sama-sama! Senang bisa berbagi pengalaman",
         "type": "text",
-        "created_at": "2024-08-28T17:17:00Z"
+        "created_at": "2025-08-26T17:17:00Z"
       }
     }
   ]
